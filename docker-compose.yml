@@ -4,7 +4,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - REACT_APP_API_URL=http://3.80.107.219:3001  # ✅ Public IP of your EC2
+      - REACT_APP_API_URL=http://3.80.107.219:3001  
 
   backend:
     image: wilfred2018/dream-vacation-app-backend:latest
