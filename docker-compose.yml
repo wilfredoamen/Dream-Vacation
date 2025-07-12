@@ -1,0 +1,20 @@
+services:
+  frontend:
+    image: wilfred2018/dream-vacation-app-frontend:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://3.80.107.219:3001  # ✅ Public IP of your EC2
+
+  backend:
+    image: wilfred2018/dream-vacation-app-backend:latest
+    ports:
+      - "3001:3001"
+    environment:
+      - DB_HOST=dreamvacations.c2jy4428k504.us-east-1.rds.amazonaws.com
+      - DB_USER=admin
+      - DB_PASSWORD=Oziegbe27
+      - DB_NAME=dreamvacations
+      - DB_PORT=3306
+      - COUNTRIES_API_BASE_URL=https://restcountries.com/v3.1
+      - PORT=3001
